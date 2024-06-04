@@ -20,25 +20,37 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 export default function App() {
   return (
     <BrowserRouter>
+    <div className="site-wrapper">
+      <header>
       <nav>
-        <Link to="/home">VanLife</Link>
+        <Link to="/home">#VANLive</Link>
         <Link to="/about">About</Link>
       </nav>
+      </header>
 
+    <main>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      </main>
+
+      
+      </div>
     </BrowserRouter>
-  );
+  )
+   
+    
+      
+  
 }
 
 function Home() {
   return (
-  <h1>You got theggg</h1>
+  <h1>You got the travel plans, we got the travel vans.</h1>
 ); 
 }
 
 function About() {
-  return (<h1>You got the</h1>)
+  return (<h1> Don't squeeze in a sedan when you could relax in a van.</h1>)
 }
