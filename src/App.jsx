@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route,Link } from "react-router-dom"
+
 /**
  * Challenge:
  * Bootstrap the VanLife project by creating the first 2 routes:
@@ -14,11 +16,28 @@
  * linked in the slides.
  */
 
-function App() {
+ export function App() {
 
   return (
-    <h1>Start here</h1>
+    <BrowserRouter>
+   <nav>
+   <Link to="/Home">VanLife</Link>
+   <Link to="/About">About</Link>
+   </nav> 
+   <Routes>
+   <Route path="/" elements={<Home />} />
+   <Route path="/About" elements={<About />} />
+   </Routes>
+   </BrowserRouter>
+    
+   
   )
 }
 
 export default App
+
+function Home(){
+  return (
+    <h1>You got the</h1>
+  )
+}
