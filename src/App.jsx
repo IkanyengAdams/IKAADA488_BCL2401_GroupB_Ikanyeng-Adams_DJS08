@@ -41,3 +41,9 @@ function Home(){
     <h1>You got the</h1>
   )
 }
+
+function About(){
+  return (
+    <h1>You got the</h1>
+  )
+}
