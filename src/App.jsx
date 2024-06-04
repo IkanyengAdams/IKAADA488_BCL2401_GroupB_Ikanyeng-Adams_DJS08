@@ -35,7 +35,9 @@ export default function App() {
       </Routes>
       </main>
 
-      
+      <footer>
+        <p>© 2024 VanLife</p>
+      </footer>
       </div>
     </BrowserRouter>
   )
