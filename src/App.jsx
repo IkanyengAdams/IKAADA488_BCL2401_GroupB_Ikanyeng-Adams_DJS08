@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Vans from "./Vans";
+import "./server"
 
 /**
  * Challenge:
@@ -49,9 +50,7 @@ export default function App() {
   )
   }
 
-  ReactDOM
-  .createRoot(document.getElementById('root'))
-  .render(<App />)
+  
 
 
 
