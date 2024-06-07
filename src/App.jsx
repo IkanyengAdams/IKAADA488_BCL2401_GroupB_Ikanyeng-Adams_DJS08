@@ -27,6 +27,7 @@ export default function App() {
                 <Route index element={<Dashboard />} />
                 <Route path="income" element={<Income />} />
                 <Route path="reviews" element={<Reviews />} />
+                <Route path="vans" element={<HostVans />} />
               </Route>
             </Route>
           </Routes>
