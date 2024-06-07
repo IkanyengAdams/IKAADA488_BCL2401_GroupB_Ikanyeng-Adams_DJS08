@@ -8,37 +8,28 @@ import Dashboard from "../src/Host/Dashboard";
 import Income from "../src/Host/Income";
 import Reviews from "../src/Host/Reviews";
 import Layout from "../src/components/Layout";
+import HostLayout from "../src/components/HostLayout";
 
-import "./server"
-
+import "./server";
 
 export default function App() {
   return (
     <BrowserRouter>
-    <div className="site-wrapper">
-      <main>
-      <Routes>
-        <Route element={<Layout />}>
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/vans" element={<Vans />} />
-        <Route path="/vans/:id" element={<VanDetail />} />
-        <Route path="/host" element={<Dashboard />} />
-        <Route path="/host/income" element={<Income />} />
-        <Route path="/host/reviews" element={<Reviews />} />
-        </Route>
-      </Routes>
-      </main>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              
+              <Route path="about" element={<About />} />
+              <Route path="vans" element={<Vans />} />
+              <Route path="vans/:id" element={<VanDetail />} />
 
-      <footer>
-        <p>© 2024 VanLife</p>
-      </footer>
-      </div>
+              <Route path="host" element={<HostLayout />}>
+                <Route index element={<Dashboard />} />
+                <Route path="income" element={<Income />} />
+                <Route path="reviews" element={<Reviews />} />
+              </Route>
+            </Route>
+          </Routes>
     </BrowserRouter>
-  )
-  }
-
-  
-
-
-
+  );
+}
