@@ -4,6 +4,7 @@ import Home from "./Home";
 import About from "./About";
 import Vans from "./Vans";
 import VanDetail from "./VanDetail";
+import Login from "./Login";
 import Dashboard from "../src/Host/Dashboard";
 import Income from "../src/Host/Income";
 import Reviews from "../src/Host/Reviews";
@@ -16,6 +17,7 @@ import NotFound
  from "./NotFound";
 import Layout from "../src/components/Layout";
 import HostLayout from "../src/components/HostLayout";
+import AuthRequired from "../src/components/AuthRequired";
 
 import "./server";
 
@@ -28,7 +30,11 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
-
+          <Route
+            path="login"
+            element={<Login />}
+          />
+         <Route element={<AuthRequired />}>
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
@@ -39,6 +45,7 @@ export default function App() {
               <Route path="pricing" element={HostVanPhotos} />
               <Route path="photos" element={HostVanPricing} />
             </Route>
+          </Route>
           </Route>
           <Route path="*" element={<NotFound />}/>
         </Route>
