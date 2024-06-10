@@ -38,7 +38,6 @@ if (!currentVan) {
   return null; 
 }
 
-
 const activeStyles = {
     fontWeight: "bold",
     textDecoration: "underline",
