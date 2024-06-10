@@ -34,6 +34,11 @@ if (error) {
     return <h1>There was an error: {error.message}</h1>
 }
 
+if (!currentVan) {
+  return null; 
+}
+
+
 const activeStyles = {
     fontWeight: "bold",
     textDecoration: "underline",
